@@ -28,34 +28,41 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                <li class="nav-item menu-open">
+                <li class="nav-item menu-close">
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
+                            Surat Keluar
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link active">
+                            <a href="<?= base_url('Surat_Undangan/index'); ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v1</p>
+                                <p>Surat Undangan</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="./index2.html" class="nav-link">
+                        <li class="nav-item menu-close">
+                            <a href="./index2.html" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v2</p>
+                                <p>Surat Akademik</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard v3</p>
-                            </a>
-                        </li>
+
                     </ul>
+                <li class="nav-item">
+                    <a href="<?= base_url('Input_surat/index'); ?>" class="nav-link active">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Tambah Surat</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('Input_surat/index'); ?>" class="nav-link active">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Kategori Surat</p>
+                    </a>
+                </li>
                 </li>
 
             </ul>

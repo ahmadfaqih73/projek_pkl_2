@@ -26,6 +26,13 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/summernote/summernote-bs4.min.css">
+    <!-- Select2 stylesheet -->
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/select2/css/select2.min.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/select2/css/select2-bootstrap4.css') ?>">
+
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/dataTables/css/dataTables.bootstrap4.min.css') ?>" />
+    <!-- JS Select2 -->
+    <script type="text/javascript" src="<?= base_url('assets/select2/js/select2.min.js') ?>"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

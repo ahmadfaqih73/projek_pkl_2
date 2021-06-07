@@ -58,7 +58,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= base_url('Input_surat/index'); ?>" class="nav-link active">
+                    <a href="<?= base_url('Kategori_surat/index'); ?>" class="nav-link active">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Kategori Surat</p>
                     </a>

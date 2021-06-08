@@ -22,7 +22,7 @@
 
                     <option value="">--Piih Kategori--</option>
                     <?php foreach ($kategori_surat as $row) {
-                        echo "<option>" .  $row['nama_kategori'] . "</option>";
+                        echo "<option>" .  $row['Kategori'] . "</option>";
                         echo $row->idkategori == $kategori_surat['id_kategori_surat'] ? 'selected' : '';
                     }
                     echo "</select>" ?>

@@ -32,6 +32,14 @@
 
             </div>
 
+            <div class=" form-group">
+                <label for="exampleEmail" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                <div class="col-sm-10">
+                    <input name="tanggal_lahir" id="tanggal_lahir" placeholder="contoh 2021-05-23" type="date" class="form-control" value="<?= set_value('tanggal_keluar'); ?>">
+                    <?= form_error('tanggal_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
+            </div>
+
             <!-- <div class="form-group"> -->
             <!-- <div>
                 <label for="varchar">Nama file</label>

@@ -11,4 +11,5 @@ class Kategori_surat extends CI_Controller
         $this->load->view('Kategori_surat/index', $data);
         $this->load->view('template/footer');
     }
+  
 }

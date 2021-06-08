@@ -48,8 +48,6 @@
 <script src="<?php echo base_url() ?>assets/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url() ?>assets/dist/js/pages/dashboard.js"></script>
-<script type="text/javascript" src="<?= base_url('assets/dataTables/js/jquery.dataTables.min.js') ?>"></script>
-<script type="text/javascript" src="<?= base_url('assets/dataTables/js/dataTables.bootstrap4.min.js') ?>"></script>
 </body>
 
 </html>

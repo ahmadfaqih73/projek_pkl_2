@@ -18,21 +18,28 @@
 
             <div class="form-group">
                 <label for="selectJenisSurat">Pilih Jenis</label>
-                <select class="form-control" id="selectJenisSurat" autofocus="true" name="nama_pelanggan">
+                <select class="form-control" id="id" name="idkategori">
 
+                    <option value="">--Piih Kategori--</option>
+                    <?php foreach ($kategori_surat as $row) {
+                        echo "<option>" .  $row['nama_kategori'] . "</option>";
+                        echo $row->idkategori == $kategori_surat['id_kategori_surat'] ? 'selected' : '';
+                    }
+                    echo "</select>" ?>
+                    <?php var_dump($row); ?>
                 </select>
+
+
             </div>
+
             <!-- <div class="form-group"> -->
             <!-- <div>
                 <label for="varchar">Nama file</label>
                 <input type="file" name="filename" required="">
             </div>
-
             <div>
-
                 <label for="varchar">foto</label>
                 <input type="file" name="foto_mhs" required="">
-
             </div> -->
             <!-- </div> -->
             <button type="button" class="btn btn-warning float-left" onclick="window.history.back(-1)">Kembali</button>

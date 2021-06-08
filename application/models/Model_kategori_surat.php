@@ -7,4 +7,8 @@ class Model_kategori_surat extends CI_Model
     {
         return $this->db->get('kategori_surat')->result_array();
     }
+    public function optionkategori()
+    {
+        return $this->db->get('kategori_surat');
+    }
 }

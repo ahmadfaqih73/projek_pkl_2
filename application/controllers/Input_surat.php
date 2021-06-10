@@ -13,4 +13,12 @@ class Input_surat extends CI_Controller
         $this->load->view('Surat_keluar/Tambah_surat', $data);
         $this->load->view('template/footer');
     }
+    public function add()
+    {
+        $this->Model_tambah_surat->insert_surat_out();
+        $this->session->set_flashdata('message', '<div class="alert
+            alert-danger" role="alert">data succes 
+            </div>');
+        redirect('Surat_Undangan');
+    }
 }

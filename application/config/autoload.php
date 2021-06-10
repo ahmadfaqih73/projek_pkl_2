@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url', 'file', 'security', 'form');
 
 /*
 | -------------------------------------------------------------------
@@ -134,5 +134,5 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array(
     'Model_user', 'Full_user', 'Model_kategori_surat',
-    'Model_surat_undangan'
+    'Model_surat_undangan', 'Model_tambah_surat'
 );

@@ -9,24 +9,28 @@
                 </div><!-- /.col -->
             </div><!-- /.row -->
 
-            <?php echo form_open_multipart('TIF/add') ?>
+            <?php echo form_open_multipart('Input_surat/add') ?>
 
             <div class="form-group">
                 <label>Nama Surat</label>
-                <input type="text" class="form-control" name="Nim" required="">
+                <input type="text" class="form-control" name="Nama" required="">
             </div>
 
             <div class="form-group">
                 <label for="selectJenisSurat">Pilih Jenis</label>
-                <select class="form-control" id="id" name="idkategori">
+                <select class="form-control" id="id" name="kategori">
 
-                    <option value="">--Piih Kategori--</option>
+                    <!-- <option value="">--Piih Kategori--</option>
                     <?php foreach ($kategori_surat as $row) {
                         echo "<option>" .  $row['Kategori'] . "</option>";
                         echo $row->idkategori == $kategori_surat['id_kategori_surat'] ? 'selected' : '';
                     }
-                    echo "</select>" ?>
+                    echo "</select>" ?> -->
                     <!-- <?php var_dump($row); ?> -->
+                    <option value=""> Pilih Kategori</option>
+                    <?php foreach ($kategori_surat as $ks) : ?>
+                        <option value="<?= $ks['Kategori'] ?>"><?= $ks['Kategori'] ?></option>
+                    <?php endforeach; ?>
                 </select>
 
 
@@ -35,7 +39,7 @@
             <div class=" form-group">
                 <label for="exampleEmail" class="col-sm-2 col-form-label">Tanggal</label>
                 <div class="col-sm-10">
-                    <input name="tanggal_lahir" id="tanggal_lahir" placeholder="contoh 2021-05-23" type="date" class="form-control" value="<?= set_value('tanggal_keluar'); ?>">
+                    <input name="tanggal" id="tanggal_lahir" placeholder="contoh 2021-05-23" type="date" class="form-control" value="<?= set_value('tanggal_keluar'); ?>">
                     <?= form_error('tanggal_lahir', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
             </div>

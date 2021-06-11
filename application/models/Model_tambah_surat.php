@@ -40,29 +40,30 @@ class Model_tambah_surat extends CI_Model
     {
 
 
-        $nama_surat         = $this->input->post('nama');
-        $oldFile                = $this->input->post('oldFiles');
-        $kategori = $this->input->post('kategori');
+        $nama_surat       = $this->input->post('nama');
+        $oldFile          = $this->input->post('oldFiles');
+        $kategori = $this->input->post('kategori_surat');
         $tanggal = $this->input->post('tanggal');
 
-        if (!empty($_FILES['filename'])) {
+        if( empty($_FILES['filename'])) {
+            $filename = $oldFile;
+        }
+        else {
             $filename  = $this->upload_file();
             unlink('./uploads/' . $oldFile);
-        } else {
-            $filename  = $this->input->post("filename");
         }
-
 
         $data = array(
             'Nama_surat'              => $nama_surat,
-            'jenis_surat' => $kategori,
-            'nama_file'      => $filename,
+            'jenis_surat'       => $kategori,
+            'nama_file'         => $filename,
             'Tanggal_keluar' => $tanggal
 
         );
-        var_dump($data);
-        die;
-        // $this->db->where('Id_mhs_tif', $id);
-        // $this->db->update('mhs_tif', $data);
+        // var_dump($data);
+        // die;
+        $this->db->where('id_surat_keluar', $this->input->post('id'));
+        $this->db->update('surat_out', $data);
+        redirect('Surat_Undangan','refresh');
     }
 }

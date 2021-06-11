@@ -19,17 +19,9 @@
             <div class="form-group">
                 <label for="selectJenisSurat">Pilih Jenis</label>
                 <select class="form-control" id="id" name="kategori">
-
-                    <!-- <option value="">--Piih Kategori--</option>
-                    <?php foreach ($kategori_surat as $row) {
-                        echo "<option>" .  $row['Kategori'] . "</option>";
-                        echo $row->idkategori == $kategori_surat['id_kategori_surat'] ? 'selected' : '';
-                    }
-                    echo "</select>" ?> -->
-                    <!-- <?php var_dump($row); ?> -->
                     <option value=""> Pilih Kategori</option>
                     <?php foreach ($kategori_surat as $ks) : ?>
-                        <option value="<?= $ks['Kategori'] ?>"><?= $ks['Kategori'] ?></option>
+                        <option value="<?= $ks['id_kategori_surat'] ?>"><?= $ks['Kategori'] ?></option>
                     <?php endforeach; ?>
                 </select>
 

@@ -28,7 +28,7 @@
                             <tr>
                                 <th scope="row"><?php echo $no ?></th>
                                 <td><?php echo $value['Nama_Surat'] ?></td>
-                                <td><?php echo $value['jenis_surat'] ?></td>
+                                <td><?php echo $value['Kategori'] ?></td>
                                 <td><?php echo $value['nama_file'] ?></td>
                                 <td><?php echo $value['Tanggal_keluar'] ?></td>
 
@@ -51,7 +51,8 @@
 
                                                 <form class="col-md-6" enctype="multipart/form-data" method="post" action="<?php echo base_url('Surat_Undangan/update_Surat_Undangan') ?>">
 
-                                                    <!-- Id Pelanggan -->
+                                                    <!-- id kat surat -->
+
                                                     <input type="hidden" name="id" value="<?php echo $value['id_surat_keluar'] ?>">
 
                                                     <div class="form-group">
@@ -62,14 +63,9 @@
                                                         <label for="kategori">Kategori</label>
                                                         <select class="form-control" id="kategori_surat" name="kategori_surat">
                                                             <?php foreach ($kategori_surat as $ks) : ?>
-                                                                <?php if ($ks == $kategori_surat['kategori_surat']) : ?>
-                                                                    <option value="<?= $ks; ?>" selected><?= $ks ?> </option>
-                                                                <?php else : ?>
-                                                                    <option value="<?= $ks; ?>"><?= $ks ?> </option>
-                                                                <?php endif; ?>
+                                                               <option value="<?= $ks['id_kategori_surat']; ?>" <?php echo $value['Kategori'] == $ks['Kategori'] ? 'selected' : '' ?>><?= $ks['Kategori'] . '  ' . $ks['id_kategori_surat'] ?></option>
                                                             <?php endforeach; ?>
                                                         </select>
-                                                        <!-- <?php var_dump($kategori_surat); ?> -->
                                                     </div>
 
                                                     <div class=" form-group">
@@ -81,8 +77,10 @@
                                                     </div>
                                                     <div>
                                                         <label for="varchar">file surat</label>
-                                                        <input class="float-right" type="file" name="filename" value="<?php echo $value['nama_file'] ?>">
-                                                        <a class="float-left" target="_blank" href="<?php echo base_url('uploads/' . $value['nama_file']) ?>"><?php echo $value['nama_file'] ?></a>
+                                                        <input class="" type="file" name="filename" value="<?php echo $value['nama_file'] ?>">
+
+                                                        <a class="" target="_blank" href="<?php echo base_url('uploads/' . $value['nama_file']) ?>"><?php echo $value['nama_file'] ?></a>
+
                                                         <input type="hidden" name="oldFiles" value="<?php echo $value['nama_file'] ?>">
                                                     </div>
 
@@ -122,4 +120,4 @@
     <!-- /.content-header -->
 
 </div>
-<!-- /.content-wrapper -->
+<!-- /.content-wrapper

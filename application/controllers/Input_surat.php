@@ -19,6 +19,6 @@ class Input_surat extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert
             alert-danger" role="alert">data succes 
             </div>');
-        redirect('Surat_Undangan');
+        // redirect('Surat_Undangan');
     }
 }

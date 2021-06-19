@@ -13,7 +13,7 @@ class Surat_Undangan extends CI_Controller
         $this->load->view('template/header');
         $this->load->view('template/Navbar');
         $this->load->view('template/sidebar');
-        $this->load->view('Surat_keluar/Surat_undangan', $data);
+        $this->load->view('Surat_keluar/Surat_undangan', $data, array('error' => ' '));
         $this->load->view('template/footer');
     }
     public function update_Surat_Undangan()

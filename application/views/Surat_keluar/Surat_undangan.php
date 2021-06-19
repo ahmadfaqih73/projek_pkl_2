@@ -57,13 +57,14 @@
 
                                                     <div class="form-group">
                                                         <label>Nama Surat</label>
-                                                        <input type="text" class="form-control" name="nama" required="" value="<?php echo $value['Nama_Surat'] ?>">
+                                                        <input type="text" class="form-control" name="Nama" required="" value="<?php echo $value['Nama_Surat'] ?>">
+                                                        <?= form_error('Nama', '<small class="text-danger pl-3">', '</small>'); ?>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="kategori">Kategori</label>
                                                         <select class="form-control" id="kategori_surat" name="kategori_surat">
                                                             <?php foreach ($kategori_surat as $ks) : ?>
-                                                               <option value="<?= $ks['id_kategori_surat']; ?>" <?php echo $value['Kategori'] == $ks['Kategori'] ? 'selected' : '' ?>><?= $ks['Kategori'] . '  ' . $ks['id_kategori_surat'] ?></option>
+                                                                <option value="<?= $ks['id_kategori_surat']; ?>" <?php echo $value['Kategori'] == $ks['Kategori'] ? 'selected' : '' ?>><?= $ks['Kategori'] . '  ' . $ks['id_kategori_surat'] ?></option>
                                                             <?php endforeach; ?>
                                                         </select>
                                                     </div>
